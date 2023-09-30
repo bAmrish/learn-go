@@ -38,6 +38,28 @@ func main() {
 		fmt.Printf("%v is located in the %v continent\n", k, v)
 	}
 
+	numbers := map[string]int{"one": 1, "two": 2}
+	fmt.Printf("%#v\n", numbers)
+
+	// If a map key does not exists then its zero value is returned.
+	fmt.Println("three: ", numbers["three"]) // three: 0
+
+	// So in case of checking if a value exists (since sometime, 0 can be a valid value)
+	// you use the "comma-exists" idiom
+	value, exists := numbers["three"]
+	if exists {
+		fmt.Printf("value of three is %v\n", value)
+	} else {
+		fmt.Println("value of three does not exits")
+	}
+
+	// You can combine the above two checks in a single statement
+	if v, ok := numbers["three"]; ok {
+		fmt.Printf("value of three is %v\n", v)
+	} else {
+		fmt.Println("value of three does not exits")
+	}
+
 	//------------------------------------------------------------
 	// DELETING MAP KEY
 	//------------------------------------------------------------
