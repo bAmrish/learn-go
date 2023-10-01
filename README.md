@@ -8,6 +8,8 @@ This repository contains sample programs for learning go for beginners
 4. [Arrays](04-arrays/main.go)
 5. [Slices](05-slices/main.go)
 6. [Maps](06-maps/main.go)
+7. [Structs](07-structs/main.go)
+7. [Embedded Structs](08-embedded-structs/main.go)
 
 There are some exercises to apply some of the concepts learned.
 1. [Random Distribution](exercises/01-random-distribution.go)
