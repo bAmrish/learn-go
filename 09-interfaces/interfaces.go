@@ -11,7 +11,7 @@ import (
 
 // In Go interfaces are collection of functions
 
-// Shape interface defining 2 functions `area()` and `perimeter`
+// Shape interface defines 2 functions `area()` and `perimeter()`
 type Shape interface {
 	area() float64
 	perimeter() float64
