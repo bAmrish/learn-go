@@ -32,8 +32,8 @@ func divide(dividend, divisor int) (quotient int, reminder int) {
 //------------------------------------------------------------
 
 // You can defer the execution of the function call using the defer keyword
-// When you call a method with defer keyword, its executed at the end of the parent function before it retunrs.
-// Its added to the stack. If there are multiple defered methods they are all added to the stack
+// When you call a method with defer keyword, its executed at the end of the parent function before it returns.
+// Its added to the stack. If there are multiple deferred methods they are all added to the stack
 // and are executed in LIFO.
 
 // The arguments to the deferred function are evaluated when the defer executes,
@@ -79,7 +79,7 @@ func readFile() {
 }
 
 // We can use these properties of defer to trace call execution
-// in an interstin manner
+// in an interesting manner
 
 func trace(s string) string {
 	fmt.Println("Entering", s)
@@ -119,4 +119,17 @@ func main() {
 	reversePrint()
 	readFile()
 	a()
+
+	//------------------------------------------------------------
+	// FUNCTION EXPRESSION
+	//------------------------------------------------------------
+	// Functions are fist class citizens in go.
+	// So they can be assigned to a variable, passed in as function arguments
+	// and can we return type of other functions
+	add := func(x, y int) int {
+		return x + y
+	}
+
+	fmt.Printf("2 + 3 = %v\n", add(2, 3))
+
 }
